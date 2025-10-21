@@ -1,45 +1,94 @@
-/* Global Styles */
+/* =======================
+   Global Styles
+======================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body {
     font-family: 'Inter', sans-serif;
     background-color: #0d1117;
     color: #e6edf3;
-    margin: 0;
-    padding: 0;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-a { text-decoration: none; }
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-/* Navbar */
-.navbar {
+/* =======================
+   Navbar
+======================= */
+.header {
+    background: rgba(13,17,23,0.95);
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid #161b22;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: rgba(13,17,23,0.95);
-    backdrop-filter: blur(5px);
-    border-bottom: 1px solid #161b22;
+    padding: 1rem 0;
 }
-.navbar .logo {
-    font-size: 1.5rem;
+.logo {
+    font-size: 1.6rem;
     font-weight: 800;
     color: #58a6ff;
 }
-.navbar .logo span { color: #1f6feb; }
-.navbar nav a {
-    margin-left: 1.5rem;
-    color: #8b949e;
+.logo span {
+    color: #1f6feb;
+}
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+.nav-links a {
     font-weight: 500;
+    color: #8b949e;
     transition: 0.3s;
 }
-.navbar nav a:hover { color: #58a6ff; }
+.nav-links a:hover {
+    color: #58a6ff;
+}
 
-/* Main Title */
+/* Hamburger menu for mobile */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+.hamburger span,
+.hamburger div {
+    height: 3px;
+    width: 25px;
+    background-color: #58a6ff;
+    border-radius: 3px;
+}
+
+/* =======================
+   Main Title & Subtitle
+======================= */
 .title {
     text-align: center;
     font-size: 2.5rem;
     margin: 3rem 0 1rem;
 }
-.title .highlight { color: #58a6ff; }
+.title .highlight {
+    color: #58a6ff;
+}
 .subtitle {
     text-align: center;
     color: #8b949e;
@@ -53,31 +102,36 @@ hr {
     margin: 0 auto 3rem;
 }
 
-/* Project Cards */
+/* =======================
+   Project Cards
+======================= */
 .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem 4rem;
+    margin-bottom: 4rem;
 }
 .card {
     background-color: #161b22;
     border: 2px solid #21262d;
     border-radius: 1rem;
     padding: 2rem;
-    position: relative;
-    box-shadow: 0 0 15px 1px rgba(88,166,255,0.15);
-    transition: transform 0.3s, box-shadow 0.3s;
     text-align: center;
+    box-shadow: 0 0 15px rgba(88,166,255,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 25px 5px rgba(88,166,255,0.3);
+    box-shadow: 0 0 25px rgba(88,166,255,0.3);
 }
-.card h3 { margin-bottom: 1rem; }
-.card p { color: #8b949e; margin-bottom: 1rem; }
+.card h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+.card p {
+    color: #8b949e;
+    margin-bottom: 1rem;
+}
 .card-icon {
     font-size: 2.5rem;
     color: #58a6ff;
@@ -87,18 +141,18 @@ hr {
 
 /* Tags */
 .tags {
-    margin: 1rem 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.5rem;
+    margin: 1rem 0;
 }
 .tags span {
     padding: 0.25rem 0.75rem;
     border-radius: 9999px;
     font-size: 0.75rem;
-    color: #e6edf3;
     background-color: #21262d;
+    color: #e6edf3;
 }
 .tags.blue span { background-color: #1f6feb; }
 .tags.green span { background-color: #2ea44f; }
@@ -112,42 +166,72 @@ hr {
     font-weight: 600;
     transition: 0.3s;
 }
-.details:hover { color: #1f6feb; }
+.details:hover {
+    color: #1f6feb;
+}
 
-/* Footer */
+/* =======================
+   Footer
+======================= */
 .footer {
-    text-align: center;
-    padding: 2rem;
-    border-top: 1px solid #161b22;
-    color: #8b949e;
-}
-.footer-links { margin-top: 1rem; display: flex; justify-content: center; gap: 1rem; }
-.footer-links a { color: #8b949e; transition: 0.3s; }
-.footer-links a:hover { color: #58a6ff; }
-
-/* Animations */
-@keyframes pulse {
-    0%,100%{opacity:1;transform:scale(1);}
-    50%{opacity:0.8;transform:scale(1.05);}
-}
-
-/* Make the whole page a flex column so footer stays at bottom */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* full viewport height */
-}
-
-/* Main content grows to fill space above footer */
-main {
-    flex: 1; 
-}
-
-/* Footer stays at bottom */
-.footer {
-    text-align: center;
-    padding: 2rem;
-    border-top: 1px solid #161b22;
-    color: #8b949e;
     background-color: #0d1117;
+    border-top: 1px solid #161b22;
+    text-align: center;
+    padding: 2rem;
+    color: #8b949e;
+    margin-top: auto;
+}
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.footer-links a {
+    transition: 0.3s;
+}
+.footer-links a:hover {
+    color: #58a6ff;
+}
+
+/* =======================
+   Animations
+======================= */
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+/* =======================
+   Responsive
+======================= */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #0d1117;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 1rem;
+        border-radius: 8px;
+        border: 1px solid #21262d;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .projects {
+        padding: 0 1rem;
+    }
+}
+@media (max-width: 480px) {
+    .title {
+        font-size: 2rem;
+    }
+    .card {
+        padding: 1.5rem;
+    }
 }

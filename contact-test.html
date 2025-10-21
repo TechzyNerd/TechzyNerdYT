@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechzyNerd | Feedback</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/contact.test.css">
+</head>
+<body>
+<header class="header">
+    <nav class="nav container">
+        <a href="index.html" class="logo">Techzy<span>Nerd</span></a>
+        <button class="hamburger" aria-label="Open navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="project.html">Projects</a>
+            <a href="learn.html">Learn</a>
+            <a href="feedback.html">Feedback</a>
+        </div>
+    </nav>
+</header>
+
+<main class="main container">
+    <h1 class="title highlight">Website Feedback</h1>
+    <p class="subtitle">Have ideas, suggestions, or noticed any issues? Share your feedback below — I read every message!</p>
+
+    <section class="feedback-form-section">
+        <form action="https://formspree.io/f/xkgqaevb" method="POST" class="feedback-form">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="_replyto" placeholder="you@example.com" required>
+
+            <label for="message">Your Feedback / Suggestion</label>
+            <textarea id="message" name="message" placeholder="Tell me what you think..." rows="6" required></textarea>
+
+            <!-- Optional CAPTCHA -->
+            <!-- Formspree allows enabling CAPTCHA from their dashboard, or you can integrate Google reCAPTCHA here -->
+
+            <button type="submit">Send Feedback</button>
+        </form>
+    </section>
+</main>
+
+<footer class="footer container">
+    <p>© 2025 TechzyNerd. All rights reserved.</p>
+    <div class="footer-links">
+        <a href="https://github.com/NerdyTechYT" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.youtube.com/@TechzyNerd" target="_blank" rel="noopener noreferrer">YouTube</a>
+    </div>
+</footer>
+
+<script src="js/responsive.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>
