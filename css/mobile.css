@@ -1,0 +1,138 @@
+/* ===== Mobile Styles (TechzyNerd) ===== */
+
+/* Base mobile breakpoint */
+@media (max-width: 768px) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    position: relative;
+  }
+
+  /* Hide nav links by default */
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #0d1117;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid #1f2937;
+    z-index: 10;
+  }
+
+  /* Show when active */
+  .nav-links.active {
+    display: flex;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .nav-links a {
+    color: #e6edf3;
+    padding: 1rem 0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s;
+  }
+
+  .nav-links a:hover {
+    background-color: #161b22;
+  }
+
+  /* Hamburger icon styling */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+  .hamburger div {
+    width: 28px;
+    height: 3px;
+    background-color: #e6edf3;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  /* Animate hamburger into X when active */
+  .hamburger.active div:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .hamburger.active div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active div:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Hero adjustments */
+  .hero {
+    text-align: center;
+    padding: 4rem 1rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  .btn-primary {
+    margin-top: 1.5rem;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* Prevent horizontal scrollbars on all devices */
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* no horizontal scroll */
+}
+
+/* Optional: fix some elements that might overflow accidentally */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+section, div {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+/* --- Responsive Styles (TechzyNerd) --- */
