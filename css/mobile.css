@@ -1,31 +1,31 @@
 /* ===== Mobile Styles (TechzyNerd) ===== */
-
-/* Base mobile breakpoint */
 @media (max-width: 768px) {
+
+  /* Nav */
   .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
     position: relative;
+    z-index: 100;
   }
 
-  /* Hide nav links by default */
+  /* Nav links hidden by default */
   .nav-links {
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: #0d1117;
     width: 100%;
+    background-color: #0d1117;
     display: none;
     flex-direction: column;
     text-align: center;
     padding: 1rem 0;
     border-top: 1px solid #1f2937;
-    z-index: 10;
   }
 
-  /* Show when active */
+  /* Show nav links when active */
   .nav-links.active {
     display: flex;
     animation: fadeIn 0.3s ease-in-out;
@@ -43,14 +43,13 @@
     background-color: #161b22;
   }
 
-  /* Hamburger icon styling */
+  /* Hamburger styling */
   .hamburger {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 6px;
     cursor: pointer;
-    z-index: 20;
   }
 
   .hamburger div {
@@ -61,7 +60,7 @@
     transition: all 0.3s ease;
   }
 
-  /* Animate hamburger into X when active */
+  /* Hamburger animation */
   .hamburger.active div:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
   }
@@ -72,18 +71,6 @@
 
   .hamburger.active div:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg);
-  }
-
-  /* Animation */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
   }
 
   /* Hero adjustments */
@@ -113,18 +100,27 @@
   }
 
   .footer-links {
+    display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 }
 
-/* Prevent horizontal scrollbars on all devices */
+/* Prevent horizontal scrollbars */
 html, body {
   width: 100%;
-  overflow-x: hidden; /* no horizontal scroll */
+  overflow-x: hidden;
 }
 
-/* Optional: fix some elements that might overflow accidentally */
+/* Ensure media elements scale */
 img, video, iframe {
   max-width: 100%;
   height: auto;
@@ -135,4 +131,3 @@ section, div {
   max-width: 100%;
   overflow-x: hidden;
 }
-/* --- Responsive Styles (TechzyNerd) --- */

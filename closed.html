@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Closed</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  /* Global Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0d1117;
+    color: #e6edf3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  /* Glowing container */
+  .container {
+    max-width: 600px;
+    padding: 2rem;
+    background-color: #161b22;
+    border-radius: 15px;
+    border: 2px solid #21262d;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(88, 166, 255, 0.5);
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Nerdy cute emoji */
+  .emoji {
+    font-size: 4rem;
+    animation: bounce 2s infinite;
+    display: block;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 15px #58a6ff, 0 0 30px #1f6feb;
+  }
+
+  h1 {
+    font-size: 2rem;
+    color: #58a6ff;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px #58a6ff;
+    animation: glowText 2s infinite alternate;
+  }
+
+  p {
+    color: #8b949e;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  a.feedback-link {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #0d1117;
+    background: linear-gradient(90deg,#58a6ff,#1f6feb);
+    border-radius: 10px;
+    box-shadow: 0 0 15px #58a6ff, 0 0 30px #1f6feb;
+    transition: all 0.3s ease;
+  }
+
+  a.feedback-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #58a6ff, 0 0 40px #1f6feb;
+  }
+
+  /* Floating animation for container */
+  @keyframes float {
+    0%,100% { transform: translateY(0px);}
+    50% { transform: translateY(-10px);}
+  }
+
+  /* Bounce emoji */
+  @keyframes bounce {
+    0%,100% { transform: translateY(0);}
+    50% { transform: translateY(-15px);}
+  }
+
+  /* Glowing text effect */
+  @keyframes glowText {
+    0% { text-shadow: 0 0 5px #58a6ff; color: #58a6ff;}
+    50% { text-shadow: 0 0 20px #1f6feb; color: #1f6feb;}
+    100% { text-shadow: 0 0 5px #58a6ff; color: #58a6ff;}
+  }
+
+  /* Cute floating stars background */
+  body::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(white 1px, transparent 1px) repeat;
+    background-size: 20px 20px;
+    animation: moveStars 60s linear infinite;
+    opacity: 0.1;
+  }
+
+  @keyframes moveStars {
+    0% { transform: translate(0,0);}
+    100% { transform: translate(50%,50%);}
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .container {
+      padding: 1.5rem;
+    }
+    h1 { font-size: 1.5rem; }
+    .emoji { font-size: 3rem; }
+  }
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <span class="emoji">👑👑</span>
+    <h1>Website Closed </h1>
+    <p>Thank you for visiting TechzyNerd! This website is currently closed for maintenance and fixiing this bad boy. I appreciate your understanding and patience during this time (idk who u are?). If you have any feedback or issues to report, please use the link below to submit them on GitHub.</p>
+    <a class="feedback-link" href="https://github.com/TechzyNerd/TechzyNerdYT/issues" target="_blank">
+      Submit Feedback / Issues
+    </a>
+  </div>
+</body>
+</html>
