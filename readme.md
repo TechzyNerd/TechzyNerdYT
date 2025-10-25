@@ -6,12 +6,27 @@
 ---
 
 ## 📝 Update Log
-> Keep track of all updates and improvements here.  
+> Keep track of all updates and improvements here.
 
-**v3.1.3** - _Latest update includes UI improvements, mobile-friendly design, and an upgraded LEARN section_  
-**v3.1.2** - _Previous update notes..._  
-**v3.1.1** - _Previous update notes..._  
-**v1.0.0** - _Initial release_  
+### v3.5.1
+- Major improvement: nav feature added  
+- Working mobile navigation menu implemented
+- This is a BIG JUMP from v3.1.3 the other was in beta now released to main branch
+
+### v3.1.3
+- UI improvements  
+- Mobile-friendly design  
+- Upgraded LEARN section
+
+### v3.1.2
+- Previous update notes
+
+### v3.1.1
+- Previous update notes
+
+### v1.0.0
+- Initial release
+
 
 ---
 
