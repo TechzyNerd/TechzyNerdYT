@@ -1,0 +1,145 @@
+/* =======================
+   Global Reset & Base Styles
+======================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+    background-color: #0d1117;
+    color: #e6edf3;
+    line-height: 1.6;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #e6edf3;
+}
+.title {
+    font-size: 2.5rem;
+    margin: 3rem 0 1rem;
+    text-align: center;
+}
+.title .highlight {
+    color: #58a6ff;
+}
+.subtitle {
+    text-align: center;
+    color: #8b949e;
+    margin-bottom: 2rem;
+}
+
+/* Buttons */
+.btn, .btn-outline, button {
+    border-radius: 0.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn {
+    background-color: #58a6ff;
+    color: #0d1117;
+    padding: 0.7rem 1.4rem;
+}
+.btn:hover {
+    background-color: #1f6feb;
+}
+.btn-outline {
+    border: 1px solid #58a6ff;
+    color: #58a6ff;
+    padding: 0.6rem 1.2rem;
+}
+.btn-outline:hover {
+    background-color: #1f6feb;
+    color: #0d1117;
+}
+
+/* Cards */
+.card, .ict-card, .resource-card, .latest-card {
+    background-color: #161b22;
+    border: 1px solid #21262d;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(88,166,255,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover, .ict-card:hover, .resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(88,166,255,0.2);
+}
+
+/* Tags / Pills */
+.tags, .tags span {
+    display: inline-block;
+    margin: 0.25rem 0.25rem 0.25rem 0;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    background-color: #21262d;
+    color: #e6edf3;
+}
+.tags.blue span { background-color: #1f6feb; }
+.tags.green span { background-color: #2ea44f; }
+.tags.orange span { background-color: #d29922; }
+
+/* Footer */
+.footer {
+    background-color: #0d1117;
+    border-top: 1px solid #161b22;
+    text-align: center;
+    padding: 2rem;
+    color: #8b949e;
+    margin-top: auto;
+}
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.footer-links a:hover {
+    color: #58a6ff;
+}
+
+/* Icons & Animations */
+.card-icon, .icon {
+    color: #58a6ff;
+    font-size: 2.5rem;
+}
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+    .card, .ict-card, .resource-card {
+        padding: 1.5rem;
+    }
+}
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+}

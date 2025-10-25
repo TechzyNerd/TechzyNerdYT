@@ -4,26 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Learn - TechzyNerd</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Core Styles -->
   <link rel="stylesheet" href="css/learn.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/global.css">
 </head>
 
 <body>
-  <header class="header">
-    <nav class="nav">
-      <a href="index.html" class="logo">Techzy<span>Nerd</span></a>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="learn.html" class="active">Learn</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
-  </header>
+<header class="header">
+  <nav class="nav">
+    <a href="index.html" class="logo">Techzy<span>Nerd</span></a>
+
+    <!-- Hamburger icon -->
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="project.html">Projects</a>
+      <a href="learn.html">Learn</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
 
   <main class="learn">
-
     <!-- Hero -->
     <section class="hero">
       <div class="hero-content">
@@ -104,18 +113,14 @@
       <p>Every expert once started as a beginner. All TechzyNerd learning materials are free — all you need is curiosity and persistence.</p>
       <p>If you need accessibility support or a special font, contact <a href="mailto:nerdztechyt@gmail.com">TechzyNerd</a>. Everyone is welcome here.</p>
     </section>
-
   </main>
 
   <footer class="footer">
     <p>© 2025 TechzyNerd — Learn. Build. Inspire.</p>
   </footer>
 
-  <script src="js/learn.jss"></script>
-  <script>lucide.createIcons();</script>
+  <!-- Core Scripts -->
+  <script src="js/learn.js"></script>
+  <script src="js/nav.js"></script>
 </body>
 </html>
-<script>
-  // Redirect to closed.html immediately
-  window.location.href = "closed.html";
-</script>

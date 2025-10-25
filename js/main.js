@@ -1,8 +1,9 @@
-// Smooth scroll when “View My Work” button is clicked
-document.querySelector('.hero-btn').addEventListener('click', event => {
-  event.preventDefault();
-  const target = document.querySelector('#featured-projects');
-  if (target) {
-    target.scrollIntoView({ behavior: 'smooth' });
+document.addEventListener("DOMContentLoaded", () => {
+  const viewWorkButton = document.querySelector('.btn-primary');
+  if (viewWorkButton) {
+    viewWorkButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.querySelector('#projects').scrollIntoView({ behavior: 'smooth' });
+    });
   }
 });

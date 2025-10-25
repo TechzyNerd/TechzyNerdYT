@@ -26,59 +26,6 @@ a {
 }
 
 /* =======================
-   Navbar
-======================= */
-.header {
-    background: rgba(13,17,23,0.95);
-    backdrop-filter: blur(5px);
-    border-bottom: 1px solid #161b22;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
-}
-.logo {
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: #58a6ff;
-}
-.logo span {
-    color: #1f6feb;
-}
-.nav-links {
-    display: flex;
-    gap: 1.5rem;
-}
-.nav-links a {
-    font-weight: 500;
-    color: #8b949e;
-    transition: 0.3s;
-}
-.nav-links a:hover {
-    color: #58a6ff;
-}
-
-/* Hamburger menu for mobile */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-}
-.hamburger span,
-.hamburger div {
-    height: 3px;
-    width: 25px;
-    background-color: #58a6ff;
-    border-radius: 3px;
-}
-
-/* =======================
    Main Title & Subtitle
 ======================= */
 .title {
@@ -206,23 +153,6 @@ hr {
    Responsive
 ======================= */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: #0d1117;
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        padding: 1rem;
-        border-radius: 8px;
-        border: 1px solid #21262d;
-    }
-    .nav-links.active {
-        display: flex;
-    }
-    .hamburger {
-        display: flex;
-    }
     .projects {
         padding: 0 1rem;
     }
@@ -233,5 +163,10 @@ hr {
     }
     .card {
         padding: 1.5rem;
+    }
+}
+@media (max-width: 360px) {
+    .tags {
+        justify-content: center;
     }
 }

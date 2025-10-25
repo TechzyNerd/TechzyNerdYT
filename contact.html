@@ -3,72 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact - TechzyNerd</title>
+<title>TechzyNerd | Feedback</title>
 
-<!-- Inter Font -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-
-<!-- Lucide Icons -->
-<script src="https://unpkg.com/lucide@latest"></script>
-
-<!-- Custom CSS -->
+<!-- Core Styles -->
 <link rel="stylesheet" href="css/contact.css">
-<link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/mobile.css">
-<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/global.css">
+<style>
+/* Temporary spacing for header */
+.header {
+    padding-bottom: 1rem; /* Push content down */
+}
+
+.main.container {
+    padding-top: 2rem; /* Ensure main content isn't too close to header */
+}
+</style>
 </head>
 <body>
-
 <header class="header">
-    <nav class="nav">
-        <a href="index.html" class="logo">Techzy<span>Nerd</span></a>
+  <nav class="nav">
+    <a href="index.html" class="logo">Techzy<span>Nerd</span></a>
 
-        <!-- Hamburger icon -->
-        <div class="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+    <!-- Hamburger icon -->
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
 
-        <div class="nav-links">
-            <a href="project.html">Projects</a>
-            <a href="contact.html">Contact</a>
-           <a href="learn.html">Learn</a>
-            <a href="index.html">Home</a>
-        </div>
-    </nav>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="project.html">Projects</a>
+      <a href="learn.html">Learn</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+  </nav>
 </header>
 
-<script src="responsive.js"></script>
+<main class="main container">
+    <h1 class="title highlight">Website Feedback</h1>
+    <p class="subtitle">Have ideas, suggestions, or noticed any issues? Share your feedback below — I read every message!</p>
 
+    <section class="feedback-form-section">
+        <form action="https://formspree.io/f/xkgqaevb" method="POST" class="feedback-form">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-<main>
-  <section class="coming-soon-section">
-    <div class="coming-soon-card">
-      <i data-lucide="alert-circle" class="coming-icon"></i>
-      <h1>Page Not Yet Ready</h1>
-      <p>This contact page is currently under development. Check back soon for updates!</p>
-      <a href="index.html" class="btn-primary">
-        Go Back Home <i data-lucide="arrow-left" class="icon"></i>
-      </a>
-    </div>
-  </section>
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="_replyto" placeholder="you@example.com" required>
+
+            <label for="message">Your Feedback / Suggestion</label>
+            <textarea id="message" name="message" placeholder="Tell me what you think..." rows="6" required></textarea>
+
+            <button type="submit">Send Feedback</button>
+        </form>
+    </section>
 </main>
 
-<!-- Footer -->
-<footer class="footer">
-  <p>&copy; 2025 TechzyNerd Portfolio. All rights reserved.</p>
-  <div class="footer-links">
-            <a href="https://github.com/NerdyTechYT">GitHub Porfile </a>
-            <a href="https://www.youtube.com/@TechzyNerd">Youtube Channel</a>
-  </div>
+<footer class="footer container">
+    <p>© 2025 TechzyNerd. All rights reserved.</p>
+    <div class="footer-links">
+        <a href="https://github.com/NerdyTechYT" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.youtube.com/@TechzyNerd" target="_blank" rel="noopener noreferrer">YouTube</a>
+    </div>
 </footer>
-<script src="js/responsive.js"></script>
-<script src="js/mobile.js"> </script>
-<script>lucide.createIcons();</script>
+
+<!-- Core Scripts -->
+<script src="js/contact.js"></script>
+<script src="js/nav.js"></script>
 </body>
 </html>
-<script>
-  // Redirect to closed.html immediately
-  window.location.href = "closed.html";
-</script>

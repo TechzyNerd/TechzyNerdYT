@@ -15,44 +15,6 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
-.header {
-  background: rgba(13, 17, 23, 0.95);
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid #161b22;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-.nav {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.logo {
-  font-size: 1.7rem;
-  font-weight: 800;
-  color: #58a6ff;
-  text-decoration: none;
-}
-.logo span {
-  color: #1f6feb;
-}
-.nav-links a {
-  color: #8b949e;
-  text-decoration: none;
-  margin-left: 1.5rem;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-.nav-links a:hover,
-.nav-links a.active {
-  color: #58a6ff;
-}
-
 /* Hero */
 .hero {
   text-align: center;
