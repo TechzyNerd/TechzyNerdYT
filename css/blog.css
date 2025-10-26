@@ -1,0 +1,151 @@
+/* * blog.css
+ * Styling for the main content areas of the blog page (Hero, Posts, Footer).
+ * Note: Navigation styling is excluded as requested (assuming it's in nav.css).
+ */
+
+/* --- Variables and Dark Theme Base Styles --- */
+:root {
+    /* Dark Theme Palette */
+    --primary-color: #3b82f6; /* Bright Blue (Accent) */
+    --primary-hover: #60a5fa; /* Lighter Blue on Hover */
+    --text-color: #e5e7eb; /* Light text for readability */
+    --bg-color: #0d1117; /* Very Dark Background (GitHub style) */
+    --card-bg: #161b22; /* Slightly Lighter Dark Surface for Cards */
+    --border-color: #30363d; /* Subtle dark gray border */
+    --shadow-subtle: 0 0 10px rgba(59, 130, 246, 0.1); /* Subtle blue glow/shadow */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure the body uses the Inter font and dark background */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-hover); /* Use the lighter primary color for links in dark mode */
+}
+
+/* Central container for content alignment */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* --- Blog Hero Section --- */
+.blog-hero {
+    /* Use the primary color as the background for a striking hero section */
+    background-color: var(--primary-color);
+    color: white; /* Ensure text is always white on the primary background */
+    padding: 6rem 0 4rem 0; 
+    text-align: center;
+    /* This margin assumes your <header> element is about 60-70px tall */
+    margin-top: 60px; 
+}
+
+.blog-hero .title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.blog-hero .subtitle {
+    font-size: 1.25rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* --- Blog Posts Layout --- */
+.blog-posts {
+    padding: 4rem 1.5rem;
+    display: grid;
+    /* Responsive grid: min 300px wide cards, fits as many as possible */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 2rem;
+}
+
+/* --- Card Styles --- */
+.card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 0.75rem; /* Rounded corners */
+    box-shadow: var(--shadow-subtle); /* Subtle shadow/glow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    /* A more noticeable highlight on hover */
+    box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.2);
+    border-color: var(--primary-color); /* Highlight border on hover */
+}
+
+.post h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--text-color); /* Use light text color */
+}
+
+.post p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    color: #9ca3af; /* Slightly darker light text for paragraphs */
+}
+
+/* Read More Button */
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+    background-color: var(--primary-hover); 
+}
+
+/* --- Footer --- */
+.footer {
+    border-top: 1px solid var(--border-color);
+    padding: 2rem 0;
+    text-align: center;
+    background-color: var(--card-bg); /* Use card background for footer */
+    margin-top: 2rem;
+}
+
+.footer p {
+    color: #9ca3af; /* Light gray for subtle footer text */
+    font-size: 0.9rem;
+}
+
+/* --- Responsiveness (Mobile adjustments) --- */
+@media (max-width: 768px) {
+    .blog-hero {
+        padding: 4rem 0 3rem 0;
+    }
+    .blog-hero .title {
+        font-size: 2.5rem;
+    }
+    .blog-hero .subtitle {
+        font-size: 1rem;
+    }
+
+    .blog-posts {
+        padding: 2rem 1.5rem;
+    }
+}
